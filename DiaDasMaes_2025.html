@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Vale Amor - Dia das Mães</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d63384;
+    }
+
+    .vale-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .vale {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .vale:hover {
+      transform: scale(1.03);
+    }
+
+    .vale h2 {
+      color: #ff69b4;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌷 Vale Amor para a Mamãe 🌷</h1>
+  <p>Escolha seu presente, mamãe! Você merece tudo isso e muito mais 💖</p>
+
+  <div class="vale-container">
+    <div class="vale">
+      <h2>🍽️ Um dia sem lavar a louça</h2>
+      <p>Relaxe hoje! A louça é por nossa conta.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+    </div>
+
+    <div class="vale">
+      <h2>☕ Café da manhã especial</h2>
+      <p>Prepare-se para um café feito com muito carinho.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+    </div>
+
+    <div class="vale">
+      <h2>🛋️ Tarde de descanso</h2>
+      <p>Nada de tarefas! Apenas descanso e paz.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+    </div>
+
+    <div class="vale">
+      <h2>🚗 Passeio especial</h2>
+      <p>Vamos dar uma volta em um lugar que você ama.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+    </div>
+
+    <div class="vale">
+      <h2>🤗 Abraço apertado</h2>
+      <p>Porque um abraço diz mais do que mil palavras.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+    </div>
+  </div>
+
+  <script>
+    function resgatar(botao) {
+      botao.textContent = "Resgatado ❤️";
+      botao.disabled = true;
+    }
+  </script>
+
+</body>
+</html>
