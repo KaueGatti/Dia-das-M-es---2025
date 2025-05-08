@@ -1,200 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Vale Amor - Dia das Mães</title>
-    <style>
-      body {
-        font-family: "Segoe UI", sans-serif;
-        background-color: #fff0f5;
-        margin: 0;
-        padding: 20px;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Vale Amor - Dia das Mães</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
 
-      h1 {
-        color: #d63384;
-      }
+    h1 {
+      color: #d63384;
+      font-size: 55px;
+    }
 
-      .vale-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin-top: 30px;
-      }
+    p {
+      font-size: 40px;
+    }
+    .vale-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-      .vale {
-        background-color: white;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-      }
+    .vale {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 15px;
+      padding: 50px;
+      padding-bottom: 5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin-bottom: 2rem;
+      height: 30rem;
+    }
 
-      .vale:hover {
-        transform: scale(1.03);
-      }
+    .vale:hover {
+      transform: scale(1.03);
+    }
 
-      .vale h2 {
-        color: #ff69b4;
-      }
+    .vale h2 {
+      color: #ff69b4;
+      font-size: 60px;
+    }
 
-      button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        border: none;
-        background-color: #ff69b4;
-        color: white;
-        border-radius: 10px;
-        cursor: pointer;
-        font-weight: bold;
-      }
+    .info-vale {
+      font-size: 55px;
+    }
 
-      button:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-      }
+    .descricao-vale {
+      font-size: 30px;
+      font-weight: 300;
+    }
 
-      @media (mix-width: 720px) {
-        body {
-          font-family: "Segoe UI", sans-serif;
-          background-color: #fff0f5;
-          margin: 0;
-          padding: 20px;
-          text-align: center;
-        }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 60px;
+    }
 
-        h1 {
-          color: #d63384;
-          font-size: 55px;
-        }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
 
-        p {
-          font-size: 40px;
-        }
+  <h1>🌷 Vale Amor para a Mamãe 🌷</h1>
+  <p>Escolha seu presente, mamãe! Você merece tudo isso e muito mais 💖</p>
 
-        .vale-container {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          margin-top: 30px;
-        }
-
-        .vale {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: white;
-          border-radius: 15px;
-          padding: 50px;
-          padding-bottom: 5em;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s;
-          margin-bottom: 2rem;
-          height: 30rem;
-        }
-
-        .vale:hover {
-          transform: scale(1.03);
-        }
-
-        .vale h2 {
-          color: #ff69b4;
-          font-size: 60px;
-        }
-
-        .info-vale {
-          font-size: 55px;
-        }
-
-        .descricao-vale {
-          font-size: 30px;
-          font-weight: 300;
-        }
-
-        button {
-          margin-top: 10px;
-          padding: 10px 20px;
-          border: none;
-          background-color: #ff69b4;
-          color: white;
-          border-radius: 10px;
-          cursor: pointer;
-          font-weight: bold;
-          font-size: 60px;
-        }
-
-        button:disabled {
-          background-color: #ccc;
-          cursor: not-allowed;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>🌷 Vale Amor para a Mamãe 🌷</h1>
-    <p>Escolha seu presente, mamãe! Você merece tudo isso e muito mais 💖</p>
-
-    <div class="vale-container">
-      <div class="vale">
-        <h2>🍽️ Um dia sem lavar a louça</h2>
-        <p class="info-vale">Relaxe hoje! A louça é por nossa conta.</p>
-        <button onclick="resgatar(this)">Resgatar</button>
-        <p class="descricao-vale"
-          >Esses vales são meramente simbólicos, mas o carinho é 100% real.
-          💖</p
-        >
-      </div>
-
-      <div class="vale">
-        <h2>☕ Café da manhã especial</h2>
-        <p class="info-vale"
-          >Prepare-se para um café feito com muito carinho.</p
-        >
-        <button onclick="resgatar(this)">Resgatar</button>
-        <p class="descricao-vale"
-          >Esses vales são meramente simbólicos, mas o carinho é 100% real.
-          💖</p
-        >
-      </div>
-
-      <div class="vale">
-        <h2>🛋️ Tarde de descanso</h2>
-        <p class="info-vale">Nada de tarefas! Apenas descanso e paz.</p>
-        <button onclick="resgatar(this)">Resgatar</button>
-        <p class="descricao-vale"
-          >Esses vales são meramente simbólicos, mas o carinho é 100% real.
-          💖</p
-        >
-      </div>
-
-      <div class="vale">
-        <h2>🚗 Passeio especial</h2>
-        <p class="info-vale">Vamos dar uma volta em um lugar que você ama.</p>
-        <button onclick="resgatar(this)">Resgatar</button>
-        <p class="descricao-vale"
-          >Esses vales são meramente simbólicos, mas o carinho é 100% real.
-          💖</p
-        >
-      </div>
-
-      <div class="vale">
-        <h2>🤗 Abraço apertado</h2>
-        <p class="info-vale">Porque um abraço diz mais do que mil palavras.</p>
-        <button onclick="resgatar(this)">Resgatar</button>
-        <p class="descricao-vale"
-          >Esses vales são meramente simbólicos, mas o carinho é 100% real.
-          💖</p
-        >
-      </div>
+  <div class="vale-container">
+    <div class="vale">
+      <h2>🍽️ Um dia sem lavar a louça</h2>
+      <p class="info-vale">Relaxe hoje! A louça é por nossa conta.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+      <p class="descricao-vale">Esses vales são meramente simbólicos, mas o carinho é 100% real. 💖</p>
     </div>
 
-    <script>
-      function resgatar(botao) {
-        botao.textContent = "Resgatado ❤️";
-        botao.disabled = true;
-      }
-    </script>
-  </body>
+    <div class="vale">
+      <h2>☕ Café da manhã especial</h2>
+      <p class="info-vale">Prepare-se para um café feito com muito carinho.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+      <p class="descricao-vale">Esses vales são meramente simbólicos, mas o carinho é 100% real. 💖</p>
+    </div>
+
+    <div class="vale">
+      <h2>🛋️ Tarde de descanso</h2>
+      <p class="info-vale">Nada de tarefas! Apenas descanso e paz.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+      <p class="descricao-vale">Esses vales são meramente simbólicos, mas o carinho é 100% real. 💖</p>
+    </div>
+
+    <div class="vale">
+      <h2>🚗 Passeio especial</h2>
+      <p class="info-vale">Vamos dar uma volta em um lugar que você ama.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+      <p class="descricao-vale">Esses vales são meramente simbólicos, mas o carinho é 100% real. 💖</p>
+    </div>
+
+    <div class="vale">
+      <h2>🤗 Abraço apertado</h2>
+      <p class="info-vale">Porque um abraço diz mais do que mil palavras.</p>
+      <button onclick="resgatar(this)">Resgatar</button>
+      <p class="descricao-vale">Esses vales são meramente simbólicos, mas o carinho é 100% real. 💖</p>
+    </div>
+  </div>
+
+  <script>
+    function resgatar(botao) {
+      botao.textContent = "Resgatado ❤️";
+      botao.disabled = true;
+    }
+  </script>
+
+</body>
 </html>
